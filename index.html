@@ -684,7 +684,14 @@
   function show(id){
     document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id==='page-'+id));
     tabs.forEach(t=>t.setAttribute('aria-selected',String(t.dataset.page===id)));
-    window.scrollTo({top:0,behavior:reduced?'auto':'smooth'});
+    // scroll to where this tab's content starts, just below the sticky nav
+    const target=document.getElementById('page-'+id);
+    if(target){
+      const nav=document.querySelector('nav');
+      const navH=nav?nav.offsetHeight:0;
+      const y=Math.max(0,target.getBoundingClientRect().top+window.scrollY-navH-8);
+      window.scrollTo({top:y,behavior:reduced?'auto':'smooth'});
+    }
     revealVisible();
     try{
       if(hasGsap){
