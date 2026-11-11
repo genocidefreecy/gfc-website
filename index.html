@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Genocide-Free Cyprus — Unit. Advocate. Take action. (v27 events split)</title>
+<title>Genocide-Free Cyprus — Unit. Advocate. Take action. (v29 message form)</title>
 <style>
   /* ============================================================
      GENOCIDE-FREE CYPRUS — v12, rebuilt from scratch.
@@ -141,6 +141,14 @@
   .subhead:first-of-type{margin-top:1.5rem}
   .rep-to{font-size:.92rem;margin:.2rem 0 1rem}
   .event-meta{margin:.15rem 0 .5rem}
+  .msg-form{display:flex;flex-direction:column;gap:.6rem;margin-top:1rem}
+  .msg-form input,.msg-form textarea{
+    font:inherit;color:var(--ink);background:var(--paper);
+    border:1px solid var(--line);border-radius:8px;
+    padding:.65rem .8rem;width:100%;
+  }
+  .msg-form textarea{resize:vertical}
+  .msg-form input:focus,.msg-form textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
   .rep-actions{display:flex;flex-wrap:wrap;gap:.7rem}
   .btn-line{background:var(--paper);color:var(--ink);border:1px solid var(--line)}
   .petition-embed{margin-top:1rem}
@@ -407,8 +415,24 @@ Sincerely,
 
   <!-- ================= CONTACT ================= -->
   <section class="page" id="page-contact" role="tabpanel">
-    <h2>Contact</h2>
-    <p class="muted">Placeholder — write to us, follow us, or join the email list.</p>
+    <h2>Get in Touch</h2>
+    <p>For questions, enquiries, collaborations or opportunities to get involved, we'd be glad to hear from you.</p>
+    <p>We also welcome news, information, research and documents relating to developments in Cyprus and the wider region. If you have something to share or believe something deserves further investigation, get in touch.</p>
+    <p>We value collaboration, shared knowledge and connections with individuals and groups working towards justice and accountability.</p>
+
+    <!--EDIT: CONTACT — the form opens the visitor's own mail app addressed to
+        this address; change the address here and in the JS at the bottom
+        (search for msgSend) if it ever changes.-->
+    <div class="home-panel">
+      <h3>Send us a message</h3>
+      <p class="muted">Your message opens in your own mail app, addressed to us — nothing is collected or stored on the website itself. You can also write to us directly at <a href="mailto:info@genocidefreecy.com">info@genocidefreecy.com</a>.</p>
+      <div class="msg-form">
+        <input id="msg-name" type="text" placeholder="Your name" aria-label="Your name">
+        <input id="msg-email" type="email" placeholder="Your email, so we can reply" aria-label="Your email">
+        <textarea id="msg-body" rows="5" placeholder="Your message" aria-label="Your message"></textarea>
+        <button class="btn btn-solid" id="msg-send" type="button">Send message</button>
+      </div>
+    </div>
   </section>
 
 </main>
@@ -543,6 +567,19 @@ Sincerely,
     }
     sec.hidden=any;
   });
+  // Get in Touch: compose a message in the visitor's mail app
+  const msgSend=document.getElementById('msg-send');
+  if(msgSend){
+    msgSend.addEventListener('click',()=>{
+      const name=(document.getElementById('msg-name').value||'').trim();
+      const from=(document.getElementById('msg-email').value||'').trim();
+      const body=(document.getElementById('msg-body').value||'').trim();
+      if(!body){document.getElementById('msg-body').focus();return;}
+      const subject='Message from the GFC website'+(name?' — '+name:'');
+      const text=(name?'Name: '+name+'\n':'')+(from?'Email: '+from+'\n':'')+'\n'+body;
+      window.location.href='mailto:info@genocidefreecy.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(text);
+    });
+  }
   tabs.forEach(t=>t.addEventListener('click',()=>show(t.dataset.page)));
   document.querySelectorAll('[data-goto]').forEach(a=>a.addEventListener('click',e=>{
     e.preventDefault();show(a.dataset.goto);
