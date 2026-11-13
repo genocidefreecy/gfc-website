@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Genocide-Free Cyprus — v39</title>
+<title>Genocide-Free Cyprus — v49</title>
 <style>
   /* ============================================================
      GENOCIDE-FREE CYPRUS — v12, rebuilt from scratch.
@@ -42,7 +42,7 @@
   }
   img{max-width:100%;display:block}
   a{color:var(--accent-deep,#8F5510)}
-  .wrap{max-width:52rem;margin:0 auto;padding:0 1.25rem}
+  .wrap{max-width:64rem;margin:0 auto;padding:0 2.25rem}
 
   /* ================= NAV ================= */
   nav{position:relative;
@@ -83,7 +83,7 @@
 
   /* ================= HERO ================= */
   .hero{background:var(--sea-deep);color:#EDEFEA;padding:4.5rem 0 4rem}
-  .hero .kicker{font-size:.9rem;letter-spacing:.06em;color:#B9C4BD;margin-bottom:.6rem}
+  .hero .kicker{font-size:.9rem;letter-spacing:.06em;color:#A8CBB4;margin-bottom:.6rem}
   .hero h1{
     font-family:var(--serif);
     font-size:clamp(2.1rem,7vw,3.6rem);
@@ -93,9 +93,10 @@
   .hero-ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.8rem}
   .btn{
     display:inline-block;text-decoration:none;cursor:pointer;
-    font:inherit;font-weight:700;padding:.75rem 1.4rem;border-radius:6px;
+    font:inherit;font-weight:700;padding:.75rem 1.4rem;border-radius:999px;
   }
   .btn-solid{background:var(--logo-green);color:#fff;border:1px solid var(--logo-green)}
+  .hero .btn{border-radius:999px}
   .hero .btn-solid{background:var(--logo-green);border-color:var(--logo-green)}
   .btn-ghost{background:transparent;color:#EDEFEA;border:1px solid rgba(237,239,234,.5)}
 
@@ -138,6 +139,8 @@
   .post>p{color:var(--ink-soft)}
   .post .date{font-size:.85rem;color:var(--ink-soft);display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;margin:0}
   .subhead{font-family:var(--serif);font-size:1.35rem;margin:2.25rem 0 .9rem}
+  .doc-title{font-size:1.6rem;margin-top:.25rem}
+  h4.subhead{font-size:1.15rem;margin-top:1.9rem}
   .subhead:first-of-type{margin-top:1.5rem}
   .rep-to{font-size:.92rem;margin:.2rem 0 1rem}
   .event-meta{margin:.15rem 0 .5rem}
@@ -173,6 +176,8 @@
   .collab p{margin:.15rem 0}
   .collab .links{margin-top:.5rem}
   .collab .links a{margin-right:.9rem}
+  .zone h3{margin:.1rem 0 .35rem}
+  .zone p{margin:.15rem 0}
   .social-links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.2rem}
   .social-links a{
     text-decoration:none;color:var(--accent-deep,#8F5510);
@@ -235,6 +240,7 @@
       <button role="tab" aria-selected="false" data-page="events">Events</button>
       <button role="tab" aria-selected="false" data-page="collaborators">Collaborators</button>
       <button role="tab" aria-selected="false" data-page="action">Take Action</button>
+      <button role="tab" aria-selected="false" data-page="zones">Apartheid Free Zones</button>
       <button role="tab" aria-selected="false" data-page="contact">Contact</button>
     </div>
   </div>
@@ -263,6 +269,7 @@
       <a href="#" data-goto="events"><h3>Events</h3><p>Protests, screenings and teach-ins. Come to the next one.</p></a>
       <a href="#" data-goto="collaborators"><h3>Collaborators</h3><p>The Cypriot groups we work with across the island.</p></a>
       <a href="#" data-goto="action"><h3>Take Action</h3><p>Petitions, campaigns and practical ways to help, today.</p></a>
+      <a href="#" data-goto="zones"><h3>Apartheid Free Zones</h3><p>Places on the island verified as apartheid-free and BDS-compliant.</p></a>
       <a href="#" data-goto="contact"><h3>Contact</h3><p>Write to us, follow us, or join the email list.</p></a>
     </nav>
     <div class="home-panel">
@@ -292,8 +299,49 @@
 
   <!-- ================= HISTORY OF CYPRUS ================= -->
   <section class="page" id="page-history" role="tabpanel">
-    <h2>History of Cyprus</h2>
-    <p class="muted">[EDIT: HISTORY — the history of Cyprus told from an anti-colonial point of view will be written here.]</p>
+    <div class="history-body">
+    <h3 class="subhead doc-title">Cyprus: A History of Empire, Division, and Complicity</h3>
+    <h4 class="subhead">A Crossroads of Civilisations</h4>
+    <p>Cyprus has been a crossroads for millennia. Its civilisation dates back over 11,000 years, and its position at the meeting point of Europe, Asia, and Africa made it a prize for successive empires. Mycenaean Greeks settled the island in the 13th–11th centuries BC, giving it a Greek character, while Phoenicians, Assyrians, Egyptians, Persians, Ptolemaic Greeks, Romans, Byzantines, Lusignan Franks, and Venetians all ruled or influenced it in turn. This layered history produced a genuinely multi-ethnic society: alongside the Greek-speaking majority, Armenian, Maronite, and Latin communities took root. The island became an example of the harmonious coexistence of different cultures. When the Ottomans conquered Cyprus in 1571, they settled some 30,000 Turkish soldiers and peasants among the indigenous population. Under Ottoman rule, religion and ethnicity were not major sources of conflict; the major cleavages were intra-ethnic rather than inter-ethnic, and Greek and Turkish Cypriots often struggled together against oppressive Ottoman governors. It was this long, plural, and largely shared existence that British colonial rule would later work to fracture.</p>
+    <h4 class="subhead">Ottoman Rule to British Acquisition (1571–1925)</h4>
+    <p>Cyprus was ruled by the Ottoman Empire from 1571. Under the millet system, the Orthodox Church became the political representative of Greek Orthodox Cypriots, with the Archbishop acting as ethnarch—a political as well as spiritual leader before the Porte. In 1878, facing defeat and seeking British support against Russia, Sultan Abdülhamid II assigned Cyprus to be “occupied and administered” by Britain, while formal Ottoman sovereignty was retained on paper. Britain annexed the island in 1914 when the Ottomans joined Germany in World War I, and Turkey formally relinquished all claims in the 1923 Treaty of Lausanne. In 1925, Cyprus was declared a Crown Colony. Cypriots had no say in any of this.</p>
+    <h4 class="subhead">Divide and Rule</h4>
+    <p>British colonial rule did not inherit an ethnic conflict; it helped manufacture one. The colonial strategy was explicitly “divide and rule,” operating vertically and horizontally to foster hostility along ethnic, religious, and class lines. The British created separate political, social, and educational institutions for Greek and Turkish Cypriots. Educational policy was deliberately ethno-nationalising, producing “good Greek” and “good Turkish” subjects rather than a shared Cypriot civic identity, with religion as the primary marker of communal belonging. The colonial state used the Greek Orthodox Church’s ethnarchic role while also cultivating rival communal elites, confessionalising politics: to be Greek was to be Orthodox, to be Turkish was to be Muslim, and the colonial state positioned itself as arbiter between two permanently opposed religious-national blocs. During the 1950s, the British recruited Turkish Cypriots in large numbers into a special Auxiliary Police to fight the Greek Cypriot insurgency—arming one community against the other and turning intercommunal antagonism into a structural feature of the colonial order.</p>
+    <h4 class="subhead">Enosis, Taksim, and the Trap of Anti-Colonialism</h4>
+    <p>Greek Cypriot resistance crystallised in EOKA, founded in 1951–55 with the dual aim of ending British rule and achieving Enosis—union with Greece. EOKA’s guerrilla campaign, launched in 1955, was genuinely anti-colonial in its immediate objective. But its ultimate goal was not an independent Cyprus; it was absorption into the Greek state. Its horizon was irredentist union with another country, not sovereign independence for the island’s people as a whole. EOKA’s leadership was far-right and Athens-based, and its project could never accommodate Turkish Cypriot political existence except as an obstacle to be overridden. Turkish Cypriots, alarmed by Enosis, moved toward Taksim—partition and union of a Turkish zone with Turkey. This demand was itself shaped by the colonial environment: Turkish Cypriots had been encouraged to see British rule as a protective shield, and the British allowed separate Turkish Cypriot municipalities to be created as tensions rose. Both “extranationalisms”—Enosis and Taksim—were mutually reactive products of the same imperial divide-and-rule framework. A genuine independent, unitary Cyprus existed as a third position, but it was squeezed between them.</p>
+    <h4 class="subhead">Independence on British Military Terms (1960)</h4>
+    <p>The Republic of Cyprus was proclaimed on 16 August 1960, not through a constituent assembly or referendum, but through the Zurich and London Agreements negotiated by Britain, Greece, and Turkey. The Cypriot communities had no serious role in their drafting, and the constitution was imposed on the people, who were never given a vote. The price of independence was the permanent retention of British sovereignty over two military enclaves: the Akrotiri and Dhekelia Sovereign Base Areas. Over half the text of the Treaty of Establishment was devoted to the SBAs and related British interests. The Treaty of Guarantee forbade both Enosis and partition and made Britain, Greece, and Turkey “guarantors” of Cyprus’s independence—giving them standing to intervene in Cypriot affairs indefinitely. The constitution was deliberately dysfunctional as a unitary state, giving the Turkish Cypriot minority 30 per cent of civil service posts and veto powers, institutionalising ethnic separateness and making governance precarious. Independence was real but fettered.</p>
+    <h4 class="subhead">Far-Right Violence and the Road to 1974</h4>
+    <p>The Greek Cypriot far right never accepted the 1960 Republic. The Akritas Plan, drafted by senior Greek Cypriot political and security figures including Glafkos Clerides and Tassos Papadopoulos, outlined a four-phase roadmap for ethnic cleansing directed at the Turkish Cypriot population and the annexation of the island to Greece. In December 1963, Makarios proposed thirteen constitutional amendments designed to strip Turkish Cypriots of their co-founding partnership status. When the Turkish Cypriot leadership rejected this, the plan moved to its second phase: coordinated terror operations.</p>
+    <p>On the night of 20–21 December 1963, Greek Cypriot police units and former EOKA militants launched synchronised assaults on Turkish civilians. In Nicosia, unarmed Turkish Cypriots were shot dead by Greek Cypriot police. Paramilitary units of IDEA, organised by Nikos Sampson, attacked the Turkish village of Küçük Kaymaklı, killing seventeen unarmed civilians and taking over 500 hostages, mostly women and children. The undefended village of Türkeli (Ayvasıl) was raided on Christmas Eve; its inhabitants were executed and buried in mass graves. During the 1963 Christmas season alone, 374 Turkish Cypriots were killed, 109 Turkish villages were forced to evacuate, over 2,500 Turkish houses were severely damaged, and between 25,000 and 30,000 Turkish Cypriots became refugees. Between 1963 and 1974, over 100 Turkish villages were attacked. In Taşkent (Tochni), 85 men and boys were executed. In Muratağa, Sandallar, and Atlılar, 126 women, children, and elderly people were massacred. These were not isolated reprisals; they were the operational expression of an eliminationist politics incubated by the colonial order.</p>
+    <p>This campaign was possible because the far right had a powerful external patron: the Greek military junta of 1967–1974. The CIA had been embedded in Greece since the civil war, building the Greek secret service as a financial and administrative appendage of the CIA. The 1967 colonels’ coup was engineered with CIA involvement, and junta leader Georgios Papadopoulos was described by senior US military staff as “the first C.I.A. agent to become premier of a European country.” The CIA funded and shielded an anti-communist, far-right dictatorship that in turn funded, armed, and directed EOKA-B in Cyprus. The Cold War logic of “containing communism” provided geopolitical cover for suppressing the Cypriot left and promoting the most reactionary, irredentist forces on the island.</p>
+    <h4 class="subhead">The 1974 Coup and Invasion</h4>
+    <p>By 1974, Makarios had begun to move against EOKA-B. The junta in Athens decided to act. On 15 July 1974, under the code name “Alexander entered the hospital,” the Cypriot National Guard, led by Greek officers, attacked the Presidential Palace with the aim of killing Makarios. Makarios escaped and was evacuated via the British Sovereign Base at Akrotiri to London. On the afternoon of 15 July, Nikos Sampson—the former IDEA paramilitary leader—was illegally sworn in as “President,” pledging to lead Cyprus to “National Union and Hellenism,” the explicit goal being immediate Enosis. On 20 July 1974, Turkey invaded, citing its guarantor rights. The Greek junta collapsed on 23 July, Sampson resigned, and the island was de facto partitioned.</p>
+    <h4 class="subhead">The Line Was Predetermined</h4>
+    <p>The division was not improvised in 1974. The Green Line in Nicosia was drawn in December 1963 by a British commander with a green pencil. In 1964, the CIA commissioned a classified study assessing plans to separate Greek and Turkish Cypriots; one scenario was described as “roughly, the situation created after the Turkish invasion in 1974.” The Acheson Plan of 1964 specified a line from Yayla through Nicosia to Famagusta, with a Turkish zone of about 38 per cent and compulsory population exchange. The 1965 Gallo Plazas report recorded a Turkish Cypriot proposal for the same line, and Turkish Cypriot representative Kutchuk submitted a map with taksim proposals along the same axis. Turkey’s Attila Plan defined the line from Morphou Bay to Famagusta; a CIA document from December 1974 is explicit that “Line B divides the island along the Attila Line, as proposed by Turkey in 1964 and again in early August 1974.” The 1974 invasion implemented a partition map that imperial and Cold War planners had already drawn, deviating “only in minor details.”</p>
+    <h4 class="subhead">After the Invasion: Trauma as a Political Weapon</h4>
+    <p>In the decades since 1974, consecutive right-wing Greek Cypriot governments—principally those dominated by DISY and its allies—built an entire political culture around the memory of the invasion. The slogan “Den Xechno” (“I Don’t Forget”) became a permanent state ideology. This was not merely remembrance; it was weaponisation. The trauma of 1974 was continuously reproduced to paint Turkey as an existential, eternal enemy, and to conflate the Turkish Cypriot community with Turkey itself—as if Turkish Cypriots were not a distinct community with their own history and agency, but simply an extension of Ankara’s will. This conflation served a dual purpose: it absolved the Greek Cypriot right of its own responsibility for the 1963–74 violence, and it justified rejecting any settlement requiring genuine power-sharing. The Annan Plan of 2004 was rejected by Greek Cypriots on exactly these grounds; Turkish Cypriots voted yes and were rewarded with continued isolation.</p>
+    <h4 class="subhead">Turkey’s Complex Role in the North</h4>
+    <p>Turkey’s 1974 intervention is often reduced to a single dimension. The reality is layered. There is genuine truth to the claim that, given the documented intent of the Akritas Plan, the massacres of 1963–64, and the far-right coup of July 1974, an undefended Turkish Cypriot community could have faced catastrophic violence. The intervention did prevent that. But Turkey did not stop at protection. It militarised the north as a forward strategic platform, settled Anatolian populations there, and instrumentalised Turkish Cypriot grievances to present itself as the sole guarantor of their security—while the Turkish Cypriot leadership was reduced to a dependent client. Turkey’s approach has oscillated between advocating a two-state solution and using the north as a bargaining chip in its broader regional ambitions. The Turkish Cypriot community’s security concerns were real; Turkey’s exploitation of them for geopolitical interests is equally real. Both truths coexist.</p>
+    <h4 class="subhead">The Anastasiades Era: Corruption as Statecraft and Strategic Reorientation</h4>
+    <p>The presidency of Nicos Anastasiades (2013–2023) was defined by two intertwined processes: the entrenchment of systemic corruption, and a decisive geopolitical reorientation toward the United States and Israel. These were not separate phenomena. The same elite networks that profited from the island’s reputation as a laundering hub and “golden passport” bazaar drove the strategic realignment, offering Cyprus’s territory, airspace, and diplomatic weight to Western powers in exchange for political cover and personal enrichment.</p>
+    <p>The scale of the corruption was documented in the “Mafia State” investigation. A 3.5-year inquiry by Cyprus’s Independent Authority Against Corruption, published in June 2026, linked Anastasiades to seven potential criminal offences, including three alleged cases of influence peddling, one felony count of abuse of power, and three further cases of abuse of power or attempted criminal conduct. The Authority confirmed that the Anastasiades-DISY administration operated as “a network of vested interests” that “indulged in a gigantic feast on the Cypriot people’s backs,” with offences including abuse of power, trading in influence, money laundering, and conspiracy. The report implicated Anastasiades’s law firm and partners, senior judicial and law enforcement officials, and the golden passport industry his government had established.</p>
+    <p>This corrupt elite actively constructed the strategic architecture that would outlast Anastasiades’s presidency. Under his administration, Cyprus moved from formal non-alignment to becoming one of the most reliable Western outposts in the Eastern Mediterranean. The “3+1” mechanism—Cyprus, Greece, Israel, plus the United States—was institutionalised. Anastasiades personally cultivated the relationship with Israel and celebrated the “three-plus-one with the United States” as the cornerstone of Cypriot policy. AIPAC was welcomed to meetings with Cypriot leadership. The message was unambiguous: the Republic of Cyprus was aligning itself with the region’s dominant imperial powers, not with the non-aligned currents of its own post-colonial history.</p>
+    <h4 class="subhead">Christodoulides: The Architect Turned President</h4>
+    <p>The continuity between the Anastasiades era and the presidency of Nikos Christodoulides is not incidental. Christodoulides served as Foreign Minister during Anastasiades’s second term, and it was in that role that he worked extensively to build the cooperative relationship with the United States and Israel. He was not a passive inheritor of the alignment; he was one of its principal architects. Upon assuming the presidency in 2023, he did not merely maintain the course—he accelerated it.</p>
+    <p>AKEL has been explicit about this continuity, noting that the “Christodoulides administration is in lockstep with the Anastasiades government in terms of Cyprus’ subservience to US strategic objectives in the region, via the deepening of military cooperation.” The entire Cypriot right—DISY, DIKO, and the far-right ELAM—has converged on this foreign policy, forming a right-wing alliance that treats Atlanticist alignment as sacrosanct.</p>
+    <p>The results have been concrete. In September 2024, the United States-Cyprus Roadmap for Bilateral Defence Cooperation was signed, establishing a formal framework for deepening security ties. In 2025, Cyprus joined three key US security assistance programmes—Foreign Military Sales, Excess Defense Articles, and Section 333—opening the floodgates for American military equipment and training. The US arms embargo on Cyprus, lifted in 2022, has been repeatedly renewed, integrating the Republic into the American defence industrial ecosystem. Christodoulides met President Biden at the White House in October 2024 and has spoken with President Trump about the “high level of cooperation” in defence and security. Cyprus has officially requested military equipment from the United States under the Excess Defence Articles programme.</p>
+    <h4 class="subhead">Videogate: Corruption Continues Under Christodoulides</h4>
+    <p>The corruption did not end with Anastasiades’s departure. It mutated and continued under Christodoulides, most visibly in the “Videogate” scandal that erupted in early 2026. A video published on social media appeared to show senior officials—including Charalambos Charalambous, the head of Christodoulides’s office, former Energy Minister Giorgos Lakkotrypis, and the CEO of the Cyfield construction group—discussing alleged illegal financing of Christodoulides’s presidential campaign and corruption in corporate social responsibility programmes. The footage was later claimed by Black Cube, an Israeli private intelligence firm founded by former Mossad officers, which stated it had exposed corruption committed by Cyfield Group in Cyprus. The revelation demolished the government’s initial narrative of a “hybrid attack.”</p>
+    <p>The scandal exposed a mechanism of institutional corruption and entanglement centred on the Presidential Palace and the First Lady’s Fund. The former director of the President’s office faced a criminal investigation for alleged violations of lobbying law, and none of the individuals or entities in the video were registered with the Anti-Corruption Authority’s lobbying registry. AKEL accused Christodoulides of “guilty silence” and of presiding over a cover-up, noting that DISY, DIKO, and ELAM acted as a “political shield” to block parliamentary scrutiny of donations to the First Lady’s fund. The President refused to answer fundamental questions about who financed the surveillance operation, whether blackmail was attempted, and what the full footage contains.</p>
+    <h4 class="subhead">Military Infrastructure and Complicity in Gaza</h4>
+    <p>The strategic alignment has made Cyprus an active node in the military infrastructure of the same imperial powers that guarantee the island’s division. The British Sovereign Base Areas—Akrotiri and Dhekelia—are colonial relics hosting US troops and intelligence agents, and they have been used for reconnaissance flights over Gaza that send targeting data directly to the Israeli military. RAF Akrotiri has conducted five-hour surveillance missions using Shadow R1 aircraft, often multiple times a week since October 2023. The base has also been used for military cargo flights to Israel, for US special forces missions, and in US-led airstrikes on Yemen in January 2024. By 2017, British personnel at Akrotiri had supported more than 1,600 air strikes in Iraq and Syria.</p>
+    <p>The Republic of Cyprus itself is complicit in this infrastructure. The Cypriot government has offered Israel the use of its bases for military operations in Gaza, further embedding the island within the hegemonic military strategy of the region. Larnaca airport has reportedly been used for NATO flights to Israel and Jordan, and US military cargo has transited through the island. AKEL has demanded to know what “military operations carried out over the last eight months” Cyprus was involved in during Israel’s assault on Gaza, and how Christodoulides can claim to defend international law in Ukraine while “standing by the Netanyahu government that is steeping an entire people in bloodshed.”</p>
+    <h4 class="subhead">The Imperial Consensus</h4>
+    <p>At the end of the day, all of these imperial powers—Britain, the United States, Turkey, and increasingly Israel—share a common interest in the perpetuation of the division. A divided Cyprus means a permanently weak Cyprus. A weak Cyprus means a pliant Cyprus. A pliant Cyprus means an island whose territory, airspace, and bases are available for whatever military adventure the empire requires—whether RAF strikes on Iraq and Syria, surveillance flights over Gaza, or intelligence operations against Hezbollah. The “Cyprus problem” is not a problem for the imperial powers; it is a solution. It is the condition that makes the island permanently available as a platform.</p>
+    <p>The right-wing Greek Cypriot establishment that weaponises the trauma of 1974 is not a victim of this arrangement; it is a junior partner in it. It postures as the defender of Hellenism while facilitating the very imperial presence that guarantees the division remains frozen. The Turkish Cypriots remain caught between a Greek Cypriot right that refuses to see them as equals and a Turkish state that claims to protect them while treating them as a strategic asset.</p>
+    <p>The through-line is clear: British colonialism created the communal division and retained the bases. The post-colonial right weaponised the trauma of 1974 to justify permanent division and permanent alignment. The Anastasiades administration fused corruption with strategic realignment, selling the island’s geopolitical position to the highest bidder while enriching a narrow elite. The Christodoulides administration has accelerated both processes—deepening military integration with the US and Israel while presiding over a new corruption scandal reaching into the Presidential Palace itself. And the bases, airports, and airspace of Cyprus continue to serve as a launchpad for wars and surveillance operations that kill, displace, and oppress millions across the region—wars Cypriots did not choose, cannot stop, and from which their political leaders profit. The division is not a wound that refuses to heal. It is a wound that the powerful have decided to keep open—because an open wound is a base, a bargaining chip, and a leash. The tragedy of Cyprus is not that the island is divided. It is that the division serves everyone except the Cypriots themselves.</p>
+    </div>
   </section>
 
 <section class="page" id="page-articles" role="tabpanel">
@@ -458,7 +506,51 @@ Sincerely,
   </section>
 
   <!-- ================= CONTACT ================= -->
-  <section class="page" id="page-contact" role="tabpanel">
+  
+  <!-- ================= APARTHEID FREE ZONES ================= -->
+  <section class="page" id="page-zones" role="tabpanel">
+    <h2>Apartheid Free Zones</h2>
+    <p class="muted">Apartheid-Free Zones are businesses, institutions and public spaces committed to ending complicity in Israel's apartheid and occupation. This includes refusing to stock or support products from illegal Israeli settlements and severing commercial, institutional and cultural ties with Israeli entities and companies linked to the occupation or military apparatus. Through collective action, they help build economic pressure and promote solidarity with the Palestinian struggle for freedom and justice.</p>
+
+    <div class="home-panel">
+      <h3>What we check</h3>
+      <p class="muted">A listing below means GFC has verified the place against these criteria. A place not being listed means it has not yet been assessed, not that it has failed.</p>
+      <p>[EDIT: CRITERIA — list the checks a place must pass, for example:]</p>
+      <p>[EDIT: no goods produced in Israel's illegal settlements.]</p>
+      <p>[EDIT: no products, services or contracts with companies on the BDS target list, such as HP, Siemens, Carrefour or AXA.]</p>
+      <p>[EDIT: no military, surveillance or security contracts tied to the occupation.]</p>
+      <p class="muted">[EDIT: how verification works — who checks, how often places are re-checked, and how a place can ask to be assessed.]</p>
+    </div>
+
+    <h3 class="subhead">Nicosia</h3>
+    <div class="home-panel zone">
+      <h3>[EDIT: Place name]</h3>
+      <p class="muted">[Café / shop / venue · address or area]</p>
+      <p>[EDIT: one line on what was checked and why it qualifies.]</p>
+      <p class="muted">Verified [Month 2026]</p>
+    </div>
+    <!--EDIT: add more verified places as .home-panel.zone cards under their district-->
+
+    <h3 class="subhead">Limassol</h3>
+    <p class="muted">[EDIT: no places verified here yet.]</p>
+
+    <h3 class="subhead">Larnaca</h3>
+    <p class="muted">[EDIT: no places verified here yet.]</p>
+
+    <h3 class="subhead">Paphos</h3>
+    <p class="muted">[EDIT: no places verified here yet.]</p>
+
+    <h3 class="subhead">The north</h3>
+    <p class="muted">[EDIT: no places verified here yet.]</p>
+
+    <div class="home-panel">
+      <h3>Know a place that should be here?</h3>
+      <p>If you run a place, or know one, that meets the criteria, write to us and we will assess it.</p>
+      <p><a class="btn btn-solid" href="#" data-goto="contact">Get in touch</a></p>
+    </div>
+  </section>
+
+<section class="page" id="page-contact" role="tabpanel">
     <h2>Get in Touch</h2>
     <p>For questions, enquiries, collaborations or opportunities to get involved, we'd be glad to hear from you.</p>
     <p>We also welcome news, information, research and documents relating to developments in Cyprus and the wider region. If you have something to share or believe something deserves further investigation, get in touch.</p>
@@ -492,6 +584,7 @@ Sincerely,
   <button data-page="events">Events</button>
   <button data-page="collaborators">Collaborators</button>
   <button data-page="action">Take Action</button>
+  <button data-page="zones">Apartheid Free Zones</button>
   <button data-page="contact">Contact</button>
 </div>
 
@@ -517,7 +610,7 @@ Sincerely,
   const menuBtn=document.getElementById('menu-btn');
   const menuPanel=document.getElementById('menu-panel');
   const menuLabel=document.getElementById('menu-label');
-  const PAGE_LABELS={home:'Home',about:'About',history:'History of Cyprus',articles:'Articles',events:'Events',collaborators:'Collaborators',action:'Take Action',contact:'Contact'};
+  const PAGE_LABELS={home:'Home',about:'About',history:'History of Cyprus',articles:'Articles',events:'Events',collaborators:'Collaborators',action:'Take Action',zones:'Apartheid Free Zones',contact:'Contact'};
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function setMenu(open){
