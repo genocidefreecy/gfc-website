@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Genocide-Free Cyprus — v56</title>
+<title>Genocide-Free Cyprus — v57</title>
 <style>
   /* ============================================================
      GENOCIDE-FREE CYPRUS — v12, rebuilt from scratch.
@@ -717,8 +717,7 @@ Sincerely,
     if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
     const bg=document.querySelector('.hero-bg');
     if(!bg)return;
-    const srcs=[...new Set([...document.querySelectorAll('.archive-img')].map(i=>i.src))];
-    if(srcs.length<1)return;
+    const srcs=["images/banner-1000000654.jpg","images/banner-1000000835.jpg","images/banner-1000005936.jpg","images/banner-1000015992.jpg","images/banner-1000016008.jpg"];
     const imgs=srcs.map(s=>{const i=document.createElement('img');i.src=s;i.alt='';bg.appendChild(i);return i;});
     let cur=0;
     imgs[0].classList.add('on');
