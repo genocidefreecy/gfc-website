@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Genocide-Free Cyprus — v66</title>
+<title>Genocide-Free Cyprus — v67</title>
 <style>
   /* ============================================================
      GENOCIDE-FREE CYPRUS — v12, rebuilt from scratch.
@@ -399,44 +399,13 @@
     </div>
     <p class="no-posts muted" hidden>No articles under this topic yet — check back soon.</p>
 
-    <!--EDIT: each article carries its topics in data-topic="..." (several allowed,
         space-separated) and a clickable chip per topic. Duplicate an <article>
         block for each new post.-->
-    <article class="post" data-topic="local analysis imperialism">
-      <p class="date"><button class="chip" data-topic="local">Local</button><button class="chip" data-topic="analysis">Analysis</button><button class="chip" data-topic="imperialism">British Imperialism</button><span>[10 November 2026]</span></p>
-      <h3><a href="#">British Colonial Bases</a></h3>
-      <p>[EDIT: Two-sentence summary or first lines of the article on the British sovereign base areas — Akrotiri and Dhekelia — and their role today.]</p>
-    </article>
-    <article class="post" data-topic="international analysis alliance">
-      <p class="date"><button class="chip" data-topic="international">International</button><button class="chip" data-topic="analysis">Analysis</button><button class="chip" data-topic="alliance">3+1 Alliance</button><span>[8 November 2026]</span></p>
-      <h3><a href="#">3+1 Alliance</a></h3>
-      <p>[EDIT: Two-sentence summary or first lines of the article on the Cyprus–Greece–Israel 3+1 framework and what it means for the region.]</p>
-    </article>
-    <article class="post" data-topic="local analysis">
-      <p class="date"><button class="chip" data-topic="local">Local</button><button class="chip" data-topic="analysis">Analysis</button><span>[9 November 2026]</span></p>
-      <h3><a href="#">[Title of your most recent article — a Cyprus story read through the bigger picture]</a></h3>
-      <p>[Two-sentence summary or first lines of the article, so readers decide whether to open it.]</p>
-    </article>
-    <article class="post" data-topic="local">
-      <p class="date"><button class="chip" data-topic="local">Local</button><span>[2 November 2026]</span></p>
-      <h3><a href="#">[Title of the previous article — something on Cyprus, ports or bases]</a></h3>
-      <p>[Short summary.]</p>
-    </article>
-    <article class="post" data-topic="international analysis">
-      <p class="date"><button class="chip" data-topic="international">International</button><button class="chip" data-topic="analysis">Analysis</button><span>[26 October 2026]</span></p>
-      <h3><a href="#">[Title of an earlier article — international news and solidarity]</a></h3>
-      <p>[Short summary.]</p>
-    </article>
-    <article class="post" data-topic="culture international">
-      <p class="date"><button class="chip" data-topic="culture">Culture</button><button class="chip" data-topic="international">International</button><span>[12 October 2026]</span></p>
-      <h3><a href="#">[Title of a culture piece — art, music, film with an international angle]</a></h3>
-      <p>[Short summary.]</p>
-    </article>
     <h3 class="subhead">Archive — earlier writing</h3>
     <p class="muted">Earlier statements and writing from before this site launched, dated as they were published — newest first.</p>
     <!--EDIT: ARCHIVE ENTRY — one block per piece of earlier writing, ordered
         newest first. Keep the original date. Duplicate the block for each item.-->
-    <div class="home-panel archive-item archive-featured" data-archive>
+    <div data-topic="imperialism" class="home-panel archive-item archive-featured" data-archive>
       <div class="archive-main">
         <p class="date">7 November 2026</p>
         <h3>BRITAIN IS HELPING SUSTAIN THE BOMBING OF YEMEN. CYPRUS IS BEING USED TO MAKE IT POSSIBLE.</h3>
@@ -458,7 +427,7 @@
       </template>
     </div>
     <div class="archive-grid">
-    <div class="home-panel archive-item" data-archive>
+    <div data-topic="local international analysis alliance" class="home-panel archive-item" data-archive>
       <p class="date">5 November 2026</p>
       <h3>CYPRUS IS BEING TURNED INTO A SHOWROOM FOR 'I$RAELI' WEAPONS</h3>
       <p class="archive-tag"><a href="#" data-topic-jump="local">Local</a> <a href="#" data-topic-jump="international">International</a> <a href="#" data-topic-jump="analysis">Analysis</a> <a href="#" data-topic-jump="alliance">3+1 Alliance</a></p>
@@ -481,7 +450,7 @@
         <p class="muted archive-source">Originally posted on <a href="https://www.instagram.com/p/DfXmbmJEayV/" rel="noopener">Instagram</a></p>
       </template>
     </div>
-    <div class="home-panel archive-item" data-archive>
+    <div data-topic="local international analysis alliance" class="home-panel archive-item" data-archive>
       <p class="date">13 October 2026</p>
       <h3>CYPRUS: A TRANSIT HUB FOR DRUGS HEADING TO 'ISRAEL'?</h3>
       <p class="archive-tag"><a href="#" data-topic-jump="local">Local</a> <a href="#" data-topic-jump="international">International</a> <a href="#" data-topic-jump="analysis">Analysis</a> <a href="#" data-topic-jump="alliance">3+1 Alliance</a></p>
@@ -511,7 +480,7 @@
         <p class="muted archive-source">Originally posted on <a href="https://www.instagram.com/p/DecHLWwCrqD/" rel="noopener">Instagram</a></p>
       </template>
     </div>
-    <div class="home-panel archive-item" data-archive>
+    <div data-topic="local international alliance investigation" class="home-panel archive-item" data-archive>
       <p class="date">13 October 2026</p>
       <h3>CYPRUS: NEWLY DELIVERED ISRAELI AIR FORCE KC-46A “GIDEON” REFUELLING AIRCRAFT APPEARS TO HAVE COVERTLY TRAVELLED TO PAPHOS AIRPORT</h3>
       <p class="archive-tag"><a href="#" data-topic-jump="local">Local</a> <a href="#" data-topic-jump="international">International</a> <a href="#" data-topic-jump="alliance">3+1 Alliance</a> <a href="#" data-topic-jump="investigation">Investigation</a></p>
@@ -883,15 +852,18 @@ Sincerely,
   const filterBtns=document.querySelectorAll('.filters button');
   const posts=document.querySelectorAll('#page-articles article.post');
   const emptyMsg=document.querySelector('#page-articles .no-posts');
+  const archiveCards=document.querySelectorAll('#page-articles .archive-item');
   function applyFilter(topic){
     filterBtns.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.topic===topic)));
     let shown=0;
-    posts.forEach(p=>{
-      const topics=(p.dataset.topic||'').split(/\s+/);
+    const toggle=el=>{
+      const topics=(el.dataset.topic||'').split(/\s+/);
       const on=(topic==='all'||topics.includes(topic));
-      p.style.display=on?'':'none';
+      el.style.display=on?'':'none';
       if(on)shown++;
-    });
+    };
+    posts.forEach(toggle);
+    archiveCards.forEach(toggle);
     if(emptyMsg)emptyMsg.hidden=shown>0;
   }
   filterBtns.forEach(b=>b.addEventListener('click',()=>applyFilter(b.dataset.topic)));
