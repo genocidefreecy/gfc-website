@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Genocide-Free Cyprus — v69</title>
+<title>Genocide-Free Cyprus — v70</title>
 <style>
   /* ============================================================
      GENOCIDE-FREE CYPRUS — v12, rebuilt from scratch.
@@ -274,7 +274,6 @@
       <button role="tab" aria-selected="false" data-page="collaborators">Collaborators</button>
       <button role="tab" aria-selected="false" data-page="campaigns">Campaigns</button>
       <button role="tab" aria-selected="false" data-page="action">Take Action</button>
-      <button role="tab" aria-selected="false" data-page="zones">Apartheid Free Zones</button>
       <button role="tab" aria-selected="false" data-page="contact">Contact</button>
     </div>
   </div>
@@ -305,7 +304,6 @@
       <a href="#" data-goto="collaborators"><h3>Collaborators</h3><p>The Cypriot groups we work with across the island.</p></a>
       <a href="#" data-goto="campaigns"><h3>Campaigns</h3><p>What we are fighting for, locally and internationally, and how to join in.</p></a>
       <a href="#" data-goto="action"><h3>Take Action</h3><p>Petitions, campaigns and practical ways to help, today.</p></a>
-      <a href="#" data-goto="zones"><h3>Apartheid Free Zones</h3><p>Places on the island verified as apartheid-free and BDS-compliant.</p></a>
       <a href="#" data-goto="contact"><h3>Contact</h3><p>Write to us, follow us, or join the email list.</p></a>
     </nav>
     <div class="home-panel">
@@ -602,11 +600,11 @@
     <div class="home-panel campaign">
       <h3>Apartheid-Free Cyprus</h3>
       <p><span class="chip">International</span> <span class="chip">Ongoing</span></p>
-      <p>Our contribution to the international BDS movement, adapted to this island: mapping and verifying businesses, institutions and public spaces across Cyprus that cut all ties with Israeli apartheid and occupation. The verified list lives on its own tab.</p>
+      <p>Our contribution to the international BDS movement, adapted to this island: mapping and verifying businesses, institutions and public spaces across Cyprus that cut all ties with Israeli apartheid and occupation. We will publish the verified list as the mapping progresses.</p>
       <h4 class="subhead">Related articles</h4>
       <p class="archive-tag"><a href="#" data-topic-jump="international">International</a> <a href="#" data-topic-jump="warcrimes">Israeli War Crimes</a></p>
       <h4 class="subhead">Take part</h4>
-      <p><a class="btn btn-solid" href="#" data-goto="zones">See the verified zones</a> <a class="btn btn-solid" href="#" data-goto="contact">Nominate a place</a></p>
+      <p><a class="btn btn-solid" href="#" data-goto="action">Sign &amp; share</a> <a class="btn btn-solid" href="#" data-goto="contact">Get in touch</a></p>
     </div>
 
     <div class="home-panel campaign">
@@ -692,47 +690,6 @@ Sincerely,
   <!-- ================= CONTACT ================= -->
   
   <!-- ================= APARTHEID FREE ZONES ================= -->
-  <section class="page" id="page-zones" role="tabpanel">
-    <h2>Apartheid Free Zones</h2>
-    <p class="muted">Apartheid-Free Zones are businesses, institutions and public spaces committed to ending complicity in Israel's apartheid and occupation. This includes refusing to stock or support products from illegal Israeli settlements and severing commercial, institutional and cultural ties with Israeli entities and companies linked to the occupation or military apparatus. Through collective action, they help build economic pressure and promote solidarity with the Palestinian struggle for freedom and justice.</p>
-
-    <div class="home-panel">
-      <h3>What we check</h3>
-      <p class="muted">A listing below means GFC has verified the place against these criteria. A place not being listed means it has not yet been assessed, not that it has failed.</p>
-      <p>[EDIT: CRITERIA — list the checks a place must pass, for example:]</p>
-      <p>[EDIT: no goods produced in Israel's illegal settlements.]</p>
-      <p>[EDIT: no products, services or contracts with companies on the BDS target list, such as HP, Siemens, Carrefour or AXA.]</p>
-      <p>[EDIT: no military, surveillance or security contracts tied to the occupation.]</p>
-      <p class="muted">[EDIT: how verification works — who checks, how often places are re-checked, and how a place can ask to be assessed.]</p>
-    </div>
-
-    <h3 class="subhead">Nicosia</h3>
-    <div class="home-panel zone">
-      <h3>[EDIT: Place name]</h3>
-      <p class="muted">[Café / shop / venue · address or area]</p>
-      <p>[EDIT: one line on what was checked and why it qualifies.]</p>
-      <p class="muted">Verified [Month 2026]</p>
-    </div>
-    <!--EDIT: add more verified places as .home-panel.zone cards under their district-->
-
-    <h3 class="subhead">Limassol</h3>
-    <p class="muted">[EDIT: no places verified here yet.]</p>
-
-    <h3 class="subhead">Larnaca</h3>
-    <p class="muted">[EDIT: no places verified here yet.]</p>
-
-    <h3 class="subhead">Paphos</h3>
-    <p class="muted">[EDIT: no places verified here yet.]</p>
-
-    <h3 class="subhead">The north</h3>
-    <p class="muted">[EDIT: no places verified here yet.]</p>
-
-    <div class="home-panel">
-      <h3>Know a place that should be here?</h3>
-      <p>If you run a place, or know one, that meets the criteria, write to us and we will assess it.</p>
-      <p><a class="btn btn-solid" href="#" data-goto="contact">Get in touch</a></p>
-    </div>
-  </section>
 
 <section class="page" id="page-contact" role="tabpanel">
     <h2>Get in Touch</h2>
@@ -769,7 +726,6 @@ Sincerely,
   <button data-page="collaborators">Collaborators</button>
   <button data-page="campaigns">Campaigns</button>
   <button data-page="action">Take Action</button>
-  <button data-page="zones">Apartheid Free Zones</button>
   <button data-page="contact">Contact</button>
 </div>
 
@@ -795,7 +751,7 @@ Sincerely,
   const menuBtn=document.getElementById('menu-btn');
   const menuPanel=document.getElementById('menu-panel');
   const menuLabel=document.getElementById('menu-label');
-  const PAGE_LABELS={home:'Home',about:'About',history:'History of Cyprus',articles:'Articles',events:'Events',collaborators:'Collaborators',campaigns:'Campaigns',action:'Take Action',zones:'Apartheid Free Zones',contact:'Contact',reader:'Articles'};
+  const PAGE_LABELS={home:'Home',about:'About',history:'History of Cyprus',articles:'Articles',events:'Events',collaborators:'Collaborators',campaigns:'Campaigns',action:'Take Action',contact:'Contact',reader:'Articles'};
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function setMenu(open){
