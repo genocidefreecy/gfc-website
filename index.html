@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Genocide-Free Cyprus — v102</title>
+<title>Genocide-Free Cyprus — v103</title>
 <style>
   /* ============================================================
      GENOCIDE-FREE CYPRUS — v12, rebuilt from scratch.
@@ -806,7 +806,7 @@ Sincerely,
     }
   });
 
-  function show(id){
+  function show(id,restore){
     document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id==='page-'+id));
     tabs.forEach(t=>t.setAttribute('aria-selected',String(t.dataset.page===id)));
     if(menuLabel)menuLabel.textContent=PAGE_LABELS[id]||id;
@@ -821,7 +821,9 @@ Sincerely,
         targetY=Math.max(0,pageEl.getBoundingClientRect().top+window.scrollY);
       }
     }
-    window.scrollTo({top:targetY,behavior:reduced?'auto':'smooth'});
+    window.scrollTo({top:targetY,behavior:(restore||reduced)?'auto':'smooth'});
+    // remember the tab in the URL so a refresh stays on it
+    if(!restore){try{history.pushState(null,'','#'+id)}catch(e){}}
   }
   // Banner crossfade: reuses the archive images already embedded in the page,
   // so no extra download weight. Skips itself if the user prefers reduced motion.
@@ -947,6 +949,16 @@ Sincerely,
   document.querySelectorAll('[data-goto]').forEach(a=>a.addEventListener('click',e=>{
     e.preventDefault();show(a.dataset.goto);
   }));
+  // restore the tab from the URL hash on load, and on back/forward
+  const PAGE_IDS=Object.keys(PAGE_LABELS);
+  function restoreFromHash(){
+    let h=(location.hash||'').replace(/^#\/??/,'');
+    if(h==='reader')h='articles';
+    if(PAGE_IDS.includes(h))show(h,true);
+  }
+  restoreFromHash();
+  window.addEventListener('popstate',restoreFromHash);
+  window.addEventListener('hashchange',restoreFromHash);
 </script>
 </body>
 </html>
