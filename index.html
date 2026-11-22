@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Genocide-Free Cyprus — v111</title>
+<title>Genocide-Free Cyprus — v112</title>
 <style>
   /* ============================================================
      GENOCIDE-FREE CYPRUS — v12, rebuilt from scratch.
@@ -210,7 +210,7 @@
   #reader-body p{margin:1.05rem 0}
   #reader-body .archive-img{width:100%;max-width:30rem;border-radius:10px;margin:1rem auto 1.5rem;display:block}
   .article-head{display:grid;grid-template-columns:minmax(0,38rem) minmax(12rem,1fr);gap:1.6rem;align-items:start;margin:.2rem 0 1.6rem}
-  .article-head .article-lead{width:100%;border-radius:10px;display:block;margin:0}
+  .article-head .article-lead{width:100%;max-width:none;border-radius:10px;display:block;margin:0}
   .article-meta-box{border:1px solid var(--line);border-radius:10px;padding:1rem 1.15rem;font-size:.92rem}
   .article-meta-box .meta-label{font-weight:700;font-size:.8rem;color:var(--accent);margin:.9rem 0 .3rem}
   .article-meta-box .meta-label:first-child{margin-top:0}
@@ -945,13 +945,15 @@ Sincerely,
   });
   // a topic chip (in an article, or on another tab such as Campaigns) applies
   // that filter, opens the Articles tab if needed, and scrolls to the filter bar
-  document.querySelectorAll('[data-topic-jump]').forEach(c=>c.addEventListener('click',e=>{
+  document.addEventListener('click',e=>{
+    const c=e.target.closest('[data-topic-jump]');
+    if(!c)return;
     e.preventDefault();
     if(!document.getElementById('page-articles').classList.contains('active'))show('articles');
     applyFilter(c.dataset.topicJump);
     const bar=document.querySelector('.filters');
     if(bar)bar.scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});
-  }));
+  });
   // Take Action: email drafts and copy-to-clipboard
   document.querySelectorAll('#page-action .rep-panel').forEach(p=>{
     const to=p.dataset.to||'';
