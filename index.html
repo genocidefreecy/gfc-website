@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Genocide-Free Cyprus — v110</title>
+<title>Genocide-Free Cyprus — v111</title>
 <style>
   /* ============================================================
      GENOCIDE-FREE CYPRUS — v12, rebuilt from scratch.
@@ -206,9 +206,20 @@
     .archive-featured .archive-img{order:-1;max-height:260px}
     .archive-grid{grid-template-columns:1fr}
   }
-  #reader-body h3{font-size:1.5rem;margin:.4rem 0 1rem}
-  #reader-body .archive-img{width:100%;max-width:30rem;border-radius:10px;margin:.6rem auto 1rem;display:block}
-  #reader-body > img.archive-img:first-of-type{max-width:48rem}
+  #reader-body h3{font-size:1.5rem;margin:.4rem 0 1.2rem}
+  #reader-body p{margin:1.05rem 0}
+  #reader-body .archive-img{width:100%;max-width:30rem;border-radius:10px;margin:1rem auto 1.5rem;display:block}
+  .article-head{display:grid;grid-template-columns:minmax(0,38rem) minmax(12rem,1fr);gap:1.6rem;align-items:start;margin:.2rem 0 1.6rem}
+  .article-head .article-lead{width:100%;border-radius:10px;display:block;margin:0}
+  .article-meta-box{border:1px solid var(--line);border-radius:10px;padding:1rem 1.15rem;font-size:.92rem}
+  .article-meta-box .meta-label{font-weight:700;font-size:.8rem;color:var(--accent);margin:.9rem 0 .3rem}
+  .article-meta-box .meta-label:first-child{margin-top:0}
+  .article-meta-box p{margin:.12rem 0}
+  .article-meta-box .archive-tag{margin-top:.2rem}
+  .article-meta-box .archive-tag a{margin:0 .35rem .4rem 0}
+  @media (max-width:820px){
+    .article-head{grid-template-columns:1fr}
+  }
   #reader-body .flight-fig{width:min(100%,35rem);margin:.6rem auto 1.2rem}
   #reader-body .flight-fig .archive-img{width:100%;margin:0}
   #reader-body .flight-fig figcaption{text-align:center;font-size:.85rem;margin-top:.4rem}
@@ -905,6 +916,25 @@ Sincerely,
       if(!tpl||!readerBody)return;
       readerBody.innerHTML='';
       readerBody.appendChild(tpl.content.cloneNode(true));
+      const firstImg=readerBody.querySelector('img.archive-img');
+      const dEl=readerBody.querySelector('.date');
+      const tgEl=readerBody.querySelector('.archive-tag');
+      if(firstImg){
+        const head=document.createElement('div');head.className='article-head';
+        firstImg.classList.add('article-lead');
+        head.appendChild(firstImg);
+        const box=document.createElement('div');box.className='article-meta-box';
+        let inner='';
+        if(tgEl){const links=[...tgEl.querySelectorAll('a')].map(a=>a.outerHTML).join(' ');inner+='<p class="meta-label">Topics</p><p class="archive-tag">'+links+'</p>';}
+        if(dEl)inner+='<p class="meta-label">Date</p><p>'+dEl.textContent+'</p>';
+        inner+='<p class="meta-label">Writer</p><p>Genocide-Free Cyprus</p>';
+        box.innerHTML=inner;
+        head.appendChild(box);
+        const h3=readerBody.querySelector('h3');
+        if(h3)h3.after(head);else readerBody.prepend(head);
+      }
+      if(dEl)dEl.remove();
+      if(tgEl)tgEl.remove();
       show('reader');
     });
   });
